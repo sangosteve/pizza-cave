@@ -20,9 +20,11 @@
 }
 
 .hero-section .hero-overlay button{
-    background-color: red;
+    background-color: #ed8a0a;
     border: none;
     border-radius: 0px;
     padding: 15px 15px 15px 15px;
+    width: 400px;
+    height: 36px;
     color:#FFF;
 }
