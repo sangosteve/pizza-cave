@@ -1,5 +1,7 @@
 .Cart{
     width: 24%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    font-size: small;
+    font-weight: 400;
 }
