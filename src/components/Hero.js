@@ -6,7 +6,7 @@ function Hero(){
             <img src="./images/hero-bg.jpg"/>
             <div className="hero-overlay">
                 <h2>HERO</h2>
-                <button className="order-menu-btn"><h1>Order Menu</h1></button>
+                <button className="order-menu-btn"><h3>Order Menu</h3></button>
                 </div>
             </div>
     )
