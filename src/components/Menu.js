@@ -8,8 +8,20 @@ function Menu(){
     const [products,setProducts] = useContext(MenuContext);
     const [cart,setCart] = useContext(CartContext);
     const addToCart =product=>{
-        setCart([...cart,product]);
-        console.log([...cart])
+            //set product units
+    product.units = 1;
+
+    //CHECK IF PRODUCT ALREADY EXISTS IN THE CART,IF EXISTANT STORE THE PRODUCT OBJECT IN A VARIABLE
+    const exist = cart.find(p=>p.id===product.id);
+    
+    if(exist){
+      setCart(cart.map(item=>item.id===exist.id?{...exist,units:exist.units+1}:item))
+      //setProductCart([...product_cart,item]);
+     // console.log([...cart])
+    }else{
+      setCart([...cart,{...product,units:1}]);
+      //console.log([...cart])
+    }
 
     }
     return (
