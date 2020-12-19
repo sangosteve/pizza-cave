@@ -3,15 +3,8 @@ import './Cart.css'
 import { CartContext } from './CartContext';
 function Cart (){
     const [cart,setCart] = useContext(CartContext);
-    
-    
-const getOrderTotal=()=>{
-    const res = cart.reduce((prev,item)=>{
-        return prev+(item.price*item.units);
-    },0)
-
-    //setTotal({total:res});
-}
+    const [lineTotal,setLineTotal] = useState(0)
+  
     return(
         <div className="Cart">
             <h3>Cart Menu</h3>
@@ -33,7 +26,7 @@ const getOrderTotal=()=>{
                 ))
             }
             <td></td>
-            <td>{getOrderTotal()}</td>
+            <td>subtotal</td>
             <td></td>
             </tbody>
             </table>

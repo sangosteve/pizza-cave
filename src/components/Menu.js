@@ -7,7 +7,7 @@ import './Menu.css'
 function Menu(){
     const [products,setProducts] = useContext(MenuContext);
     const [cart,setCart] = useContext(CartContext);
-    const addToCart =product=>{
+    const addToCart = product=>{
             //set product units
     product.units = 1;
 
